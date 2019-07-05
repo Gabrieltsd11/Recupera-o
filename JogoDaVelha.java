@@ -65,7 +65,6 @@ public class JogoDaVelha
         if(jogadas == 9)
         {
             derrota = "EMPATE";
-            
         }
         D[0] = v[0][0] + v[0][1] + v[0][2];
         D[1] = v[1][0] + v[1][1] + v[1][2];
@@ -77,13 +76,18 @@ public class JogoDaVelha
         
         D[6] = v[0][0] + v[1][1] + v[2][2];
         D[7] = v[0][2] + v[1][1] + v[2][0];
-        for(int i = 0; i > D.length; i++)
+        
+        for(int i = 0; i < D.length; i++)
         {
             if(D[i].equals("XXX"))
+            {
                 derrota = "jogador 2";
+            }    
             else if (D[i].equals("OOO"))
+            {    
                 derrota = "jogador 1";
+            }    
         }
-                            return derrota;
+                return derrota;
     }
 }
